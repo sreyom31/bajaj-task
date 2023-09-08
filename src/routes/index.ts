@@ -1,9 +1,9 @@
 import { Router } from 'express';
+import userRoute from './user.route';
 
 const router = Router();
 
-const defaultRoutes = [
-];
+const defaultRoutes = [{ path: '/', route: userRoute }];
 
 defaultRoutes.forEach((route) => {
   router.use(route.path, route.route);
